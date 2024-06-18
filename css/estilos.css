@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    background-image: url(../imagenes/fondo.png);
+    background-repeat: repeat;
+    color: rgb(96, 87, 87);
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.5s;
+}
+
+header {
+    background-color: rgb(222, 214, 211);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    margin: 10px 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    color: rgb(96, 87, 87);
+    font-size: 26px;
+}
+
+h2 {
+    color: rgb(96, 87, 87);
+    font-size: 15px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 0 1 calc(100% - 200px); /* Mantener el tamaño del contenedor */
+    margin: 175px; /* Mantener el margen grande */
+    transform: scale(4); /* Escalar los elementos al 400% */
+    transform-origin: center center; /* Mantener la escala centrada */
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+video {
+    width: 50%;
+    height: auto;
+    margin: 220px 0; /* Ajustar el margen para mantener la coherencia visual */
+}
+
+footer {
+    background-color: rgb(222, 214, 211);
+    color: rgb(96, 87, 87);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+    line-height: 80px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+    margin: 10px;
+    animation: logoAnimation 4s 2s infinite both alternate ease-in-out;
+}
+
+@keyframes logoAnimation {
+    from {
+        transform: scale(0) rotate(360deg);
+    }
+    to {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    width: 100px;
+    height: 30px;
+    display: block;
+    margin: 30px auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px; 
+    text-align: center;
+    line-height: 30px;
+    transition: background-color 1s, color 1s;
+    border-radius: 10%;
+}
+
+a:hover {
+    background-color: black;
+    color: rgb(222, 214, 211);
+}
